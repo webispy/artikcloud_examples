@@ -1,4 +1,5 @@
 {
 	"User_Token": "<your user token>",
 	"Device_Token_for_sendMessage": "<device token for testing sendMessage>"
+	"Device_ID_for_sendMessage": "<device id for testing sendMessage>"
 }

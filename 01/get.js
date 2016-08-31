@@ -6,10 +6,10 @@ var config = require('./config.json');
 if (process.env.http_proxy)
 	var agent = new proxyagent(process.env.http_proxy);
 
-var sendMessage = function(device_token, message_data) {
+var sendMessage = function(device_id, device_token, message_data) {
 	return new Promise((resolve, reject) => {
 		var post_data = JSON.stringify({
-			'sdid': Device_ID,
+			'sdid': device_id,
 			'type': 'message',
 			'data': message_data
 		});
@@ -153,7 +153,7 @@ if (1) {
 
 if (0) {
 	console.log('Test sendMessage');
-	sendMessage(config.Device_Token_for_sendMessage, {
+	sendMessage(config.Device_ID_for_sendMessage, config.Device_Token_for_sendMessage, {
 		value: 2345,
 		switch: true
 	}).then((result) => {
