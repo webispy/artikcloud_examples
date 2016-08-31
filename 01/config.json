@@ -1,0 +1,4 @@
+{
+	"User_Token": "<your user token>",
+	"Device_Token_for_sendMessage": "<device token for testing sendMessage>"
+}
